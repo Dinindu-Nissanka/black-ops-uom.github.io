@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension	type="module"
+      version="3.0"
+      client="site"
+      method="upgrade">
+		<name>Social Media Links Slider</name> 
+     		<author>Bryan Keller</author> 
+     		<creationDate>2014-02-13</creationDate> 
+     		<license>GPL 2.0</license> 
+     		<authorEmail>admin@frontallobemarketing.com</authorEmail> 
+     		<version>1.0.2</version> 
+		<description><![CDATA[
+    <p><a href="http://www.huntersspeak.com/index.php/joomla-extensions/social-media-links-slider" target="_blank">Social Media Links Slider</a> is a module that displays links to all of your social media profile pages so your members and guests can follow and connect with you.</p>
+    <p>Visit our <a href='http://www.free-extensions-fervor.com/forum/index.html' target='_blank'>Forum</a> if you have questions or comments regarding the extension.</p>
+    <p>Please, <a href="http://extensions.joomla.org/extensions/social-web/social-presence/social-profiles/26567" target="_blank">vote for the extension</a> on the Joomla! Extensions Directory.</p>
+    ]]></description>
+    <files>
+
+        <filename module="mod_slidesocialconnect">mod_slidesocialconnect.php</filename>
+        	<filename>index.html</filename>
+        	<filename>style.css</filename>
+        	<filename>helper.php</filename>
+		<filename>vertical-right.png</filename>
+        	<filename>tmpl/default.php</filename>
+        	<filename>tmpl/index.html</filename>
+		<folder>icons/</folder>
+    </files>
+	<languages folder="site">
+	<language tag="en-GB">en-GB.mod_slidesocialconnect.ini</language>
+	</languages>
+
+<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+		<field type="spacer" name="spacerspecialname" label="MOD_PRESENCE_SETTINGS" />
+
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Module Class Suffix" />
+				<field name="loadjQuery" type="radio" default="1" label="Load jQuery" description="jQuery is required by this module. The only reason not to load it is if it has already been loaded manually or by another module.">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="fbtop" type="text" default="100" label="Margin from top" description="Default: 100" />	
+				<field name="rtmargin" type="text" default="38" label="Width of Slide" description="Default: 38" />	
+
+		<field name="size" type="text" default="32" label="Choose Icon Size" description="Choose the size of your icons (Typically between 24 and 64 pixels)." />
+
+		<field name="margin" type="text" default="2px" label="Space between icons" description="Enter the amount of space you would like between icons (Typically between 1 and 3)."/>			
+
+		<field name="text" type="text" default="Follow us on" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+		
+		<field name="rsstext" type="text" default="RSS Feed" label="Hover Text for RSS Icon" description="If you are using the RSS Icon, add the text to display when you mouseover the icon. ex: 'Subscribe to our Feed' (This module does not generate a feed, it only provides an RSS icon to link to your feed)"/>
+	
+		<field name="target" type="radio" default="_blank" label="Target Window" description="Choose to open the link in a new browser window or the same window">
+				<option value="_blank">New</option>
+				<option value="_self">Same</option>
+		</field>
+	
+		<field name="robots" type="radio" default="1" label="rel='nofollow'" description="Search Engines that support the rel='nofollow' attribute exclude these links from their ranking calculation ">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+		</field>
+			
+		<field name="support" type="radio" default="yes" label="Support the Author?" description="This option allows you to show/hide a link back to our website.">
+				<option value="no">No</option>
+				<option value="yes">Yes</option>
+		</field>
+
+
+		<field type="spacer" name="spacerspecial" label="PLG_SPECIALEFFECT_SETTINGS" />
+
+		<field name="effect" type="list" default="none" label="Special Effect" description="Choose which type of special effect you would like to display or choose none.">
+				<option value="none">None</option>
+				<option value="zoom">Zoom</option>
+				<option value="shrink">Shrink</option>
+				<option value="bounce">Bounce</option>
+				<option value="tilt">Tilt</option>
+				<option value="right">Right</option>
+				<option value="left">Left</option>
+				<option value="down">Down</option>
+				<option value="rotate90">Rotate 90</option>
+				<option value="rotate180">Rotate 180</option>
+				<option value="rotate270">Rotate 270</option>
+				<option value="rotatemin90">Rotate Minus 90</option>
+				<option value="rotatemin180">Rotate Minus 180</option>
+				<option value="rotatemin270">Rotate Minus 270</option>
+		</field>
+
+		<field name="opacity" type="list" default="100" label="Opacity Level" description="Choose the level of opacity to display your icons.">
+				<option value="100">100</option>
+				<option value="90">90</option>
+				<option value="80">80</option>
+				<option value="70">70</option>
+				<option value="60">60</option>
+				<option value="50">50</option>
+				<option value="40">40</option>
+				<option value="30">30</option>
+				<option value="20">20</option>
+				<option value="10">10</option>
+		</field>
+
+
+		<field type="spacer" name="spacer2" label="PLG_SOCIALPROFILE_SETTINGS" />
+
+		<field type="spacer" name="spacer2gop" label="MOD_GOOGLEPLUSONE_SETTINGS" />
+
+		<field name="ic1" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url1" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht1" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<field name="ic1" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url1" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht1" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<field name="ic2" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url2" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht2" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+		
+		<field name="ic3" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url3" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht3" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic4" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url4" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<field name="ht4" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic5" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url5" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<field name="ht5" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic6" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url6" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht6" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+		
+		<field name="ic7" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url7" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht7" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+		
+		<field name="ic8" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url8" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<field name="ht8" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic9" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url9" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht9" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		
+		<field name="ic10" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url10" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<field name="ht10" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic11" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url11" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<field name="ht11" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic12" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url12" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht12" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		
+		<field name="ic13" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url13" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht13" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		
+		<field name="ic14" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url14" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		
+
+		<field name="ht14" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic15" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url15" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht15" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		
+		<field name="ic16" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url16" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht16" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		
+		<field name="ic17" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url17" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht17" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		
+		<field name="ic18" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url18" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht18" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		
+		<field name="ic19" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url19" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht19" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		
+		<field name="ic20" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url20" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht20" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		
+		<field name="ic21" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url21" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		
+
+		<field name="ht21" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic22" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url22" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht22" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+		
+		<field name="ic23" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url23" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht1" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+		
+		<field name="ic24" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url24" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht24" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+		
+		<field name="ic25" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url25" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht25" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+		
+		<field name="ic26" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url26" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht26" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+		
+		<field name="ic27" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url27" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht27" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+		
+		<field name="ic28" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url28" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht28" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+		
+		<field name="ic29" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url29" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		
+
+		<field name="ht29" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic30" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url30" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht30" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+		
+		<field name="ic31" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url31" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht31" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic32" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url32" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht32" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic33" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url33" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht33" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic34" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url34" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht34" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic35" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url35" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht35" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic36" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url36" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht36" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic37" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url37" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht37" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic38" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url38" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht38" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic39" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url39" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht39" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic40" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url40" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht40" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic41" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url41" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht41" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic42" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url42" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht42" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic43" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url43" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht43" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic44" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url44" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+
+		<field name="ht44" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic45" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url45" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht45" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic46" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url46" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht46" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic47" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url47" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht47" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic48" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url48" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht48" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic49" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url49" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht49" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic50" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url50" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht50" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic51" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url51" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht51" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic52" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url52" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht52" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic53" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url53" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht53" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic54" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url54" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht54" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic55" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url55" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht55" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic56" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url56" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht56" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic57" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url57" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht57" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic58" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url58" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht58" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic59" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url59" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht59" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic60" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url60" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht60" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic61" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url61" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht61" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic62" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url62" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht62" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic63" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url63" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht63" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic64" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url64" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+
+		<field name="ht64" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic65" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url65" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht65" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic66" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url66" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht66" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic67" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url67" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht67" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic68" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url68" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht68" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic69" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url69" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht69" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic70" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url70" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+
+		<field name="ht70" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic71" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url71" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht71" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic72" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url72" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht72" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic73" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url73" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht73" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic74" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url74" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht74" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic75" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url75" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht75" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic76" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url76" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht76" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic77" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url77" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht77" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic78" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url78" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht78" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic79" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url79" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht79" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic80" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url80" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht80" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic81" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url81" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht81" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic82" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url82" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht82" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic83" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url83" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht83" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic84" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url84" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht84" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic85" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url85" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht85" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic86" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url86" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht86" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic87" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url87" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht87" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic88" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url88" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht88" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic89" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url89" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht89" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic90" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url90" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht90" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic91" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url91" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht91" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic92" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url92" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht92" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic93" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url93" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht93" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic94" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url94" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht94" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic95" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url95" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht95" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic96" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url96" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht96" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic97" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url97" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht97" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic98" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url98" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht98" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic99" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url99" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht99" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic100" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url100" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht100" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic101" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url101" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht101" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic102" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url102" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht102" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic103" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url103" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht103" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic104" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url104" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht104" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic105" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url105" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht105" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic106" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url106" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht106" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic107" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url107" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht107" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic108" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url108" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht108" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic109" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url109" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht109" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic110" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url110" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht110" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic111" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url111" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht111" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic112" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url112" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht112" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic113" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url113" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht113" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic114" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url114" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht114" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+v
+		<field name="ic115" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url115" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht115" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic116" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url116" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht116" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic117" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url117" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht117" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic118" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url118" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht118" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic119" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url119" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht119" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+		<field name="ic120" type="imagelist" default="" label="Choose Icon" description="Select the icon image that you want to display" directory="/modules/mod_slidesocialconnect/icons" striptext="" />
+		<field name="url120" type="text" default="" size="75" label="URL" description="Type the full URL including http://"/>
+
+		<field name="ht120" type="text" default="" size="75" label="Hover Text" description="Text to display when you mouseover the icon. ex: 'Follow us on' (The icon name will be apended to the end of this text to display ex: 'Follow us on Twitter'"/>
+
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

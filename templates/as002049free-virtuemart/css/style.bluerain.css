@@ -1,0 +1,1817 @@
+/***************************************************************************************/
+/*
+/*		Designed by 'AS Designing'
+/*		Web: http://www.asdesigning.com
+/*		Web: http://www.astemplates.com
+/*		License: Creative Commons
+/*
+/**************************************************************************************/
+
+/**************************************************************************************/
+/**************************************************************************************/
+/*   Elements
+/**************************************************************************************/
+/**************************************************************************************/
+
+body, #facebox .content
+{
+	background-color: #121212;
+	color: #BDBDBD;
+	background-image: url('../images/styles/bluerain/bg.general.png');
+}
+
+.featured-view .spacer span, .latest-view .spacer span, .topten-view .spacer span, .recent-view .spacer span, .related-products-view .spacer span, .browse-view .row .product .spacer span, span.stock-level
+{
+    color: #BDBDBD;
+}
+
+.wrapper
+{
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.article-info
+{
+	color: #E6E6E6;
+}
+
+a
+{
+	color: #2750A2;
+}
+
+a:hover
+{
+	color: #BDBDBD;
+}
+
+img.frame,
+.img-intro-left img,
+.img-fulltext-left img,
+.img-intro-none img,
+.img-fulltext-none img,
+.img-intro-right img,
+.img-fulltext-right img
+{
+	border: 3px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+}
+
+select,
+input,
+textarea,
+.CodeMirror-wrapping,
+
+table.user-details input.invalid, table.user-details input, form#userForm select, form#adminForm select, .user-details select,
+table.user-details input.invalid:hover, table.user-details input:hover, .ask-a-question-view input, .ask-a-question-view input#email, .ask-a-question-view input#email:hover, .ask-a-question-view .form-field textarea.field, .ask-a-question-view .form-field textarea.field:hover, .ask-a-question-view input.counter, .ask-a-question-view input.counter:hover, input.counter, input.counter:hover, input.quantity-input,
+
+span.custom-variant-inputbox input.custom-attribute:hover,span.quantity-box input.quantity-input:hover,input.vm-default:hover,span.quantity-box input.quantity-input:hover,.ask-a-question-view input.counter:hover,.ask-a-question-view input#email:hover,table.user-details input:hover,a.ask-a-question:hover,a.details:hover,div.details:hover,a.product-details:hover,button.default:hover
+{
+	background-color: #272727;
+	border: 1px solid #343445;
+	border-radius: 3px;
+	color: #BDBDBD;
+    background-image: none;
+}
+
+ .orderlistcontainer div.activeOrder, .orderlistcontainer div.orderlist
+{
+    background-color: #272727;
+    border: 1px solid #343445;
+    border-radius: 3px;
+    color: #BDBDBD;
+}
+
+.orderlistcontainer div.orderlist div:hover, .orderlistcontainer div.orderlist a:hover
+{
+    background-color: #272727;
+}
+
+.inputbox,
+#jform_name,
+#jform_username,
+#jform_password1,
+#jform_password2,
+#jform_email,
+#jform_email1,
+#jform_email2,
+#jform_title,
+#jform_url,
+#jform_catid,
+#jform_state,
+#jform_params_editor,
+#jform_params_timezone,
+#jform_params_language,
+#jform_params_admin_style,
+#jform_params_admin_language,
+#jform_params_helpsite,
+#username,
+#password
+{
+	border: 1px solid #343445;
+	border-radius: 3px;
+}
+
+/**************************************************************************************/
+/* Header
+/**************************************************************************************/
+/**************************************************************************************/
+
+#header h1,
+#header h2,
+#header h3
+{
+	color: #E6E6E6;
+}
+
+#header a
+{
+	color: #BDBDBD;
+}
+
+#header a:hover
+{
+	color: #2750A2;
+}
+
+/**************************************************************************************/
+/* Header Row 0 																	  */
+
+#header .row0 .search input
+{
+	color: #BDBDBD;
+}
+
+/**************************************************************************************/
+/* Header Row 1 		                                                              */
+
+#header .row1
+{
+	color: #E8E8E8;
+}
+ 
+#header .row1 #companyname,
+#header .row1 #companyname a
+{
+	color: #E8E8E8;
+	text-shadow: 1px 1px #000000;
+}
+
+#header .row1 #companyname a:hover
+{
+	color: #E8E8E8;
+}
+
+#header .row1 .slogan
+{
+	color: #2750A2;
+	text-shadow: 1px 1px #000000;
+}
+
+.companycontacts
+{
+	color: #2750A2;
+	text-shadow: 1px 1px #000000;
+}
+
+.companycontacts .callnow b
+{
+	color: #E8E8E8;
+}
+
+/**************************************************************************************/
+/* Header Row 2 - Top menu                                                            */
+
+#header .row2 #topmenu
+{
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+    background-image: url("../images/styles/bluerain/bg.topmenu.png");		
+}
+
+#header .row2 #topmenu ul.menu li a
+{
+	color: #E8E8E8;
+	text-shadow: 1px 1px #000000;
+}
+
+#header .row2 #topmenu ul.menu li
+{
+	border-right: 1px solid #000000;
+}
+
+#header .row2 #topmenu ul.menu li.current a,
+#header .row2 #topmenu ul.menu li.active a,
+#header .row2 #topmenu ul.menu li a:hover
+{
+	color: #2750A2;
+	text-shadow: 1px 1px #000000;
+}
+
+#header .row2 #topmenu ul.menu ul
+{
+	color: #F6F6F6;
+	background-color: #1E1E1E;
+	border: 1px solid #343445;
+}
+
+#header .row2 #topmenu ul.menu ul li a,
+#header .row2 #topmenu ul.menu ul li span.separator
+{
+	color: #F6F6F6;
+}
+
+#header .row2 #topmenu ul.menu ul li.current a:hover,
+#header .row2 #topmenu ul.menu ul li.active a:hover,
+#header .row2 #topmenu ul.menu ul li.actives a:hover,
+#header .row2 #topmenu ul.menu ul li.parent a:hover,
+#header .row2 #topmenu ul.menu li.deeper ul li a:hover,
+#header .row2 #topmenu ul.menu li.current ul li a:hover,
+#header .row2 #topmenu ul.menu li.active ul li a:hover,
+#header .row2 #topmenu ul.menu li.actives ul li a:hover,
+#header .row2 #topmenu ul.menu li.parent ul li a:hover,
+#header .row2 #topmenu ul.menu li ul li a:hover
+{
+	color: #2750A2;
+}
+
+#header .row2 #topmenu ul.menu ul ul
+{
+	color: #F6F6F6;
+}
+
+
+/**************************************************************************************/
+/* Header Row 3 (Slider)                                                              */
+
+
+#header .row3col1
+{
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+}
+
+#header .row3 .toprow
+{
+	background-color: #272727;
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	background-repeat: repeat;		
+}
+
+.nivo-caption h1,
+.nivo-caption h2,
+.nivo-caption h3
+{
+	color: #2750A2 !important;	
+}
+
+
+/**************************************************************************************/
+/* Breadcrums                                                                         */
+
+
+#breadcrumb
+{
+	color: #BDBDBD;
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+    background-image: url("../images/styles/bluerain/bg.breadcrumb.png");	
+}
+
+#breadcrumb a
+{
+	color: #2750A2;
+}
+
+#breadcrumb a:hover
+{
+	color: #BDBDBD;
+}
+
+.breadrow #search input
+{
+	color: #BDBDBD;
+}
+
+
+/**************************************************************************************/
+/* Header Row 4                                                                       */
+ 
+ 
+#header .row4 .wrapper
+{
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+}
+
+#header .row4 h3 span
+{
+	color: #2750A2;
+}
+
+/* Header Row 4 Column 1 */
+
+#header .row4 .row4col1, #header .row4 .wrapper
+{
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	background-repeat: repeat;
+	background-color: #272727;
+}
+
+#header .row4col1 h1,
+#header .row4col1 h2,
+#header .row4col1 h3,
+#header .row4col1 h4,
+#header .row4col1 h5
+{
+	color: #E8E8E8;
+	text-shadow: 1px 1px #000000;
+}
+
+#header .row4col1
+{
+	color: #E8E8E8;
+}
+
+#header .row4col1 a
+{
+	color: #E8E8E8;
+}
+
+#header .row4col1 a:hover
+{
+	color: #2750A2;
+}
+
+#header .row4col1 .button,
+#header .row4col1 .validate,
+#header .row4col1 .readmore,
+#header .row4col1 .readmore button,
+#header .row4col1 .readmore .button,
+#header .row4col1 input.button,
+#header .row4col1 button.button,
+#header .row4col1 button.validate,
+#header .row4col1 button
+{
+	color: #CFCFCF !important;
+	background-color: #2E2E2E;
+}
+#header .row4col1 .button a,
+#header .row4col1 .readmore a,
+#header .row4col1 .readmore button a,
+#header .row4col1 .readmore .button a,
+#header .row4col1 input.button a,
+#header .row4col1 button.button a
+{
+	color: #CFCFCF !important;
+}
+
+#header .row4col1 .button a:hover,
+#header .row4col1 .readmore:hover,
+#header .row4col1 .readmore:hover a,
+#header .row4col1 .readmore a:hover,
+#header .row4col1 .readmore button:hover,
+#header .row4col1 .readmore .button:hover,
+#header .row4col1 .readmore button a:hover,
+#header .row4col1 .readmore .button a:hover,
+#header .row4col1 input.button:hover,
+#header .row4col1 input.button a:hover,
+#header .row4col1 button.validate:hover,
+#header .row4col1 button:hover,
+#header .row4col1 button.button:hover,
+#header .row4col1 button.button a:hover
+{
+	color: #CFCFCF !important;
+	background-color: #404040;
+}
+
+/* Header Row 4 Column 2 */
+
+#header .row4 .row4col2
+{
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	background-repeat: repeat;
+	background-color: #272727;
+}
+
+#header .row4col2 h1,
+#header .row4col2 h2,
+#header .row4col2 h3,
+#header .row4col2 h4,
+#header .row4col2 h5
+{
+	color: #E8E8E8;
+	text-shadow: 1px 1px #000000;	
+}
+
+#header .row4col2
+{
+	color: #E8E8E8;
+}
+
+#header .row4col2 a
+{
+	color: #E8E8E8;
+}
+
+#header .row4col2 a:hover
+{
+	color: #2750A2;
+}
+
+#header .row4col2 .button,
+#header .row4col2 .validate,
+#header .row4col2 .readmore,
+#header .row4col2 .readmore button,
+#header .row4col2 .readmore .button,
+#header .row4col2 input.button,
+#header .row4col2 button.button,
+#header .row4col2 button.validate,
+#header .row4col2 button
+{
+	color: #CFCFCF !important;
+	background-color: #2E2E2E;
+}
+
+#header .row4col2 .button a,
+#header .row4col2 .readmore a,
+#header .row4col2 .readmore button a,
+#header .row4col2 .readmore .button a,
+#header .row4col2 input.button a,
+#header .row4col2 button.button a
+{
+	color: #CFCFCF !important;
+}
+
+#header .row4col2 .button a:hover,
+#header .row4col2 .readmore:hover,
+#header .row4col2 .readmore:hover a,
+#header .row4col2 .readmore a:hover,
+#header .row4col2 .readmore button:hover,
+#header .row4col2 .readmore .button:hover,
+#header .row4col2 .readmore button a:hover,
+#header .row4col2 .readmore .button a:hover,
+#header .row4col2 input.button:hover,
+#header .row4col2 input.button a:hover,
+#header .row4col2 button.validate:hover,
+#header .row4col2 button:hover,
+#header .row4col2 button.button:hover,
+#header .row4col2 button.button a:hover
+{
+	color: #CFCFCF !important;
+	background-color: #404040;
+}
+
+/* Header Row 4 Column 3 */
+
+#header .row4 .row4col3
+{
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	background-repeat: repeat;
+	background-color: #272727;
+}
+
+#header .row4col3 h1,
+#header .row4col3 h2,
+#header .row4col3 h3,
+#header .row4col3 h4,
+#header .row4col3 h5
+{
+	color: #E8E8E8;
+	text-shadow: 1px 1px #000000;
+}
+
+#header .row4col3
+{
+	color: #E8E8E8;
+}
+
+#header .row4col3 a
+{
+	color: #E8E8E8;
+}
+
+#header .row4col3 a:hover
+{
+	color: #2750A2;
+}
+
+#header .row4col3 .button,
+#header .row4col3 .validate,
+#header .row4col3 .readmore,
+#header .row4col3 .readmore button,
+#header .row4col3 .readmore .button,
+#header .row4col3 input.button,
+#header .row4col3 button.button,
+#header .row4col3 button.validate,
+#header .row4col3 button
+{
+	color: #CFCFCF !important;
+	background-color: #2E2E2E;
+}
+
+#header .row4col3 .button a,
+#header .row4col3 .readmore a,
+#header .row4col3 .readmore button a,
+#header .row4col3 .readmore .button a,
+#header .row4col3 input.button a,
+#header .row4col3 button.button a
+{
+	color: #CFCFCF !important;
+}
+
+#header .row4col3 .button a:hover,
+#header .row4col3 .readmore:hover,
+#header .row4col3 .readmore:hover a,
+#header .row4col3 .readmore a:hover,
+#header .row4col3 .readmore button:hover,
+#header .row4col3 .readmore .button:hover,
+#header .row4col3 .readmore button a:hover,
+#header .row4col3 .readmore .button a:hover,
+#header .row4col3 input.button:hover,
+#header .row4col3 input.button a:hover,
+#header .row4col3 button.validate:hover,
+#header .row4col3 button:hover,
+#header .row4col3 button.button:hover,
+#header .row4col3 button.button a:hover
+{
+	color: #CFCFCF !important;
+	background-color: #404040;
+}
+
+/* Header Row 4 Column 4 */
+
+#header .row4 .row4col4
+{
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	background-repeat: repeat;
+	background-color: #272727;
+}
+
+#header .row4col4 h1,
+#header .row4col4 h2,
+#header .row4col4 h3,
+#header .row4col4 h4,
+#header .row4col4 h5
+{
+	color: #E8E8E8;
+	text-shadow: 1px 1px #000000;
+}
+
+#header .row4col4
+{
+	color: #E8E8E8;
+}
+
+#header .row4col4 a
+{
+	color: #E8E8E8;
+}
+
+#header .row4col4 a:hover
+{
+	color: #2750A2;
+}
+
+#header .row4col4 .button,
+#header .row4col4 .validate,
+#header .row4col4 .readmore,
+#header .row4col4 .readmore button,
+#header .row4col4 .readmore .button,
+#header .row4col4 input.button,
+#header .row4col4 button.button,
+#header .row4col4 button.validate,
+#header .row4col4 button
+{
+	color: #CFCFCF !important;
+	background-color: #2E2E2E;
+}
+
+#header .row4col4 .button a,
+#header .row4col4 .readmore a,
+#header .row4col4 .readmore button a,
+#header .row4col4 .readmore .button a,
+#header .row4col4 input.button a,
+#header .row4col4 button.button a
+{
+	color: #CFCFCF !important;
+}
+
+#header .row4col4 .button a:hover,
+#header .row4col4 .readmore:hover,
+#header .row4col4 .readmore:hover a,
+#header .row4col4 .readmore a:hover,
+#header .row4col4 .readmore button:hover,
+#header .row4col4 .readmore .button:hover,
+#header .row4col4 .readmore button a:hover,
+#header .row4col4 .readmore .button a:hover,
+#header .row4col4 input.button:hover,
+#header .row4col4 input.button a:hover,
+#header .row4col4 button.validate:hover,
+#header .row4col4 button:hover,
+#header .row4col4 button.button:hover,
+#header .row4col4 button.button a:hover
+{
+	color: #CFCFCF !important;
+	background-color: #404040;
+}
+
+/**************************************************************************************/
+/**************************************************************************************/
+/* Content
+/**************************************************************************************/
+/**************************************************************************************/
+
+/**************************************************************************************/
+/* Column Left
+/**************************************************************************************/
+/**************************************************************************************/
+
+#colleft a
+{
+	color: #BDBDBD;
+}
+
+#colleft a:hover
+{
+	color: #2750A2;
+}
+
+#colleft ul li a,
+#colleft ul li.active ul li a
+{
+	color: #BDBDBD;
+}
+
+#colleft ul li a:hover,
+#colleft ul ul li a:hover
+{
+	color: #2750A2;
+}
+
+#colleft .moduletable ul.menu li a,
+#colleft .moduletable_menu ul.menu li a,
+#colleft .moduletable #login-form ul li a
+{
+	color: #BDBDBD;
+}
+
+#colleft .moduletable ul.menu li a:hover,
+#colleft .moduletable_menu ul.menu li a:hover,
+#colleft .moduletable #login-form ul li a:hover
+{
+	color: #2750A2;
+}
+
+#colleft input
+{
+	color: #BDBDBD;
+}
+
+#colleft .more a
+{
+	color: #BDBDBD;
+}
+
+#colleft .more a:hover
+{
+	color: #2750A2;
+}
+
+/**************************************************************************************/
+/* Rows                                                                               */
+
+#colleft .row0,
+#colleft .row1,
+#colleft .row2,
+#colleft .row3
+{
+	color: #BDBDBD;
+}
+
+#colleft .row1 form#login-form,
+#colleft .row4,
+#colleft .row5
+{
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	background-repeat: repeat;	
+	color: #BDBDBD;
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+}
+
+#colleft .row0 h1,
+#colleft .row0 h2,
+#colleft .row0 h3,
+#colleft .row1 h1,
+#colleft .row1 h2,
+#colleft .row1 h3,
+#colleft .row2 h1,
+#colleft .row2 h2,
+#colleft .row2 h3,
+#colleft .row3 h1,
+#colleft .row3 h2,
+#colleft .row3 h3
+{
+	color: #E6E6E6;
+	text-shadow: 1px 1px #000000;
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	background-repeat: repeat;
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+}
+
+#colleft .row0 h3 span,
+#colleft .row1 h3 span,
+#colleft .row2 h3 span,
+#colleft .row3 h3 span
+{
+	color: #2750A2;
+}
+
+#colleft .row4 h1,
+#colleft .row4 h2,
+#colleft .row4 h3,
+#colleft .row5 h1,
+#colleft .row5 h2,
+#colleft .row5 h3
+{
+	color: #E6E6E6;
+	text-shadow: 1px 1px #000000;
+}
+
+#colleft .row4 h3 span,
+#colleft .row5 h3 span
+{
+	color: #2750A2;
+}
+
+#colleft .row4 a,
+#colleft .row4 ul li a,
+#colleft .row4 ul li.active ul li a,
+#colleft .row4 .moduletable ul.menu li a,
+#colleft .row4 .moduletable_menu ul.menu li a,
+#colleft .row4 .moduletable #login-form ul li a,
+#colleft .row4 .more a,
+#colleft .row5 a,
+#colleft .row5 ul li a,
+#colleft .row5 ul li.active ul li a,
+#colleft .row5 .moduletable ul.menu li a,
+#colleft .row5 .moduletable_menu ul.menu li a,
+#colleft .row5 .moduletable #login-form ul li a,
+#colleft .row5 .more a
+{
+	color: #BDBDBD;
+}
+
+#colleft .row4 a:hover,
+#colleft .row4 ul li a:hover,
+#colleft .row4 ul ul li a:hover,
+#colleft .row4 .moduletable ul.menu li a:hover,
+#colleft .row4 .moduletable_menu ul.menu li a:hover,
+#colleft .row4 .moduletable #login-form ul li a:hover,
+#colleft .row4 .more a:hover,
+#colleft .row5 a:hover,
+#colleft .row5 ul li a:hover,
+#colleft .row5 ul ul li a:hover,
+#colleft .row5 .moduletable ul.menu li a:hover,
+#colleft .row5 .moduletable_menu ul.menu li a:hover,
+#colleft .row5 .moduletable #login-form ul li a:hover,
+#colleft .row5 .more a:hover
+{
+	color: #FFFFFF;
+}
+
+#colleft .row4 .button,
+#colleft .row4 .validate,
+#colleft .row4 .readmore,
+#colleft .row4 .readmore button,
+#colleft .row4 .readmore .button,
+#colleft .row4 input.button,
+#colleft .row4 button.button,
+#colleft .row4 button.validate,
+#colleft .row4 button,
+#colleft .row5 .button,
+#colleft .row5 .validate,
+#colleft .row5 .readmore,
+#colleft .row5 .readmore button,
+#colleft .row5 .readmore .button,
+#colleft .row5 input.button,
+#colleft .row5 button.button,
+#colleft .row5 button.validate,
+#colleft .row5 button
+{
+	color: #CFCFCF !important;
+	background-color: #2E2E2E;
+}
+
+#colleft .row4 .button a,
+#colleft .row4 .readmore a,
+#colleft .row4 .readmore button a,
+#colleft .row4 .readmore .button a,
+#colleft .row4 input.button a,
+#colleft .row4 button.button a,
+#colleft .row5 .button a,
+#colleft .row5 .readmore a,
+#colleft .row5 .readmore button a,
+#colleft .row5 .readmore .button a,
+#colleft .row5 input.button a,
+#colleft .row5 button.button a
+{
+	color: #CFCFCF !important;
+}
+
+#colleft .row4 .button a:hover,
+#colleft .row4 .readmore:hover,
+#colleft .row4 .readmore:hover a,
+#colleft .row4 .readmore a:hover,
+#colleft .row4 .readmore button:hover,
+#colleft .row4 .readmore .button:hover,
+#colleft .row4 .readmore button a:hover,
+#colleft .row4 .readmore .button a:hover,
+#colleft .row4 input.button:hover,
+#colleft .row4 input.button a:hover,
+#colleft .row4 button.validate:hover,
+#colleft .row4 button:hover,
+#colleft .row4 button.button:hover,
+#colleft .row4 button.button a:hover,
+#colleft .row5 .button a:hover,
+#colleft .row5 .readmore:hover,
+#colleft .row5 .readmore:hover a,
+#colleft .row5 .readmore a:hover,
+#colleft .row5 .readmore button:hover,
+#colleft .row5 .readmore .button:hover,
+#colleft .row5 .readmore button a:hover,
+#colleft .row5 .readmore .button a:hover,
+#colleft .row5 input.button:hover,
+#colleft .row5 input.button a:hover,
+#colleft .row5 button.validate:hover,
+#colleft .row5 button:hover,
+#colleft .row5 button.button:hover,
+#colleft .row5 button.button a:hover
+{
+	color: #CFCFCF !important;
+}
+
+#colleft .row4 .readmore:hover,
+#colleft .row4 .readmore button:hover,
+#colleft .row4 .readmore .button:hover,
+#colleft .row4 input.button:hover,
+#colleft .row4 button.validate:hover,
+#colleft .row4 button:hover,
+#colleft .row4 button.button:hover,
+#colleft .row5 .readmore:hover,
+#colleft .row5 .readmore button:hover,
+#colleft .row5 .readmore .button:hover,
+#colleft .row5 input.button:hover,
+#colleft .row5 button.validate:hover,
+#colleft .row5 button:hover,
+#colleft .row5 button.button:hover
+{
+	color: #CFCFCF !important;
+	background-color: #404040;
+}
+
+/**************************************************************************************/
+/* Column Right
+/**************************************************************************************/
+/**************************************************************************************/
+
+#colright a
+{
+	color: #BDBDBD;
+}
+
+#colright a:hover
+{
+	color: #2750A2;
+}
+
+#colright ul.menu li a,
+#colright ul li.active ul li a
+{
+	color: #BDBDBD;
+}
+
+#colright ul li a:hover,
+#colright ul ul li a:hover
+{
+	color: #2750A2
+}
+
+#colright .moduletable ul.menu li a,
+#colright .moduletable_menu ul.menu li a,
+#colright .moduletable #login-form ul li a
+{
+	color: #BDBDBD;
+}
+
+#colright .moduletable ul.menu li a:hover,
+#colright .moduletable_menu ul.menu li a:hover,
+#colright .moduletable #login-form ul li a:hover
+{
+	color: #2750A2;
+}
+
+#colright input
+{
+	color: #BDBDBD;
+}
+
+#colright .more a
+{
+	color: #BDBDBD;
+}
+
+#colright .more a:hover
+{
+	color: #2750A2;
+}
+
+/**************************************************************************************/
+/* Rows                                                                               */
+
+#colright .row1,
+#colright .row2,
+#colright .row3
+{
+	color: #BDBDBD;
+}
+
+#colright .row4,
+#colright .row5
+{
+	color: #BDBDBD;
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	background-repeat: repeat;
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+}
+
+#colright .row1 h1,
+#colright .row1 h2,
+#colright .row1 h3,
+#colright .row2 h1,
+#colright .row2 h2,
+#colright .row2 h3,
+#colright .row3 h1,
+#colright .row3 h2,
+#colright .row3 h3
+{
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	background-repeat: repeat;
+	color: #E6E6E6;
+	text-shadow: 1px 1px #000000;
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+}
+
+#colright .row1 h3 span,
+#colright .row2 h3 span,
+#colright .row3 h3 span
+{
+	color: #2750A2;
+}
+
+#colright .row4 h1,
+#colright .row4 h2,
+#colright .row4 h3,
+#colright .row5 h1,
+#colright .row5 h2,
+#colright .row5 h3
+{
+	color: #E6E6E6;
+	text-shadow: 1px 1px #000000;
+	padding: 20px 22px 0px;
+}
+#colright .row4 h3 span,
+#colright .row5 h3 span
+{
+	color: #2750A2;
+}
+
+#colright .row4 a,
+#colright .row4 ul li a,
+#colright .row4 ul li.active ul li a,
+#colright .row4 .moduletable ul.menu li a,
+#colright .row4 .moduletable_menu ul.menu li a,
+#colright .row4 .moduletable #login-form ul li a,
+#colright .row4 .more a,
+#colright .row5 a,
+#colright .row5 ul li a,
+#colright .row5 ul li.active ul li a,
+#colright .row5 .moduletable ul.menu li a,
+#colright .row5 .moduletable_menu ul.menu li a,
+#colright .row5 .moduletable #login-form ul li a,
+#colright .row5 .more a
+{
+	color: #BDBDBD;
+}
+
+#colright .row4 a:hover,
+#colright .row4 ul li a:hover,
+#colright .row4 ul ul li a:hover,
+#colright .row4 .moduletable ul.menu li a:hover,
+#colright .row4 .moduletable_menu ul.menu li a:hover,
+#colright .row4 .moduletable #login-form ul li a:hover,
+#colright .row4 .more a:hover,
+#colright .row5 a:hover,
+#colright .row5 ul li a:hover,
+#colright .row5 ul ul li a:hover,
+#colright .row5 .moduletable ul.menu li a:hover,
+#colright .row5 .moduletable_menu ul.menu li a:hover,
+#colright .row5 .moduletable #login-form ul li a:hover,
+#colright .row5 .more a:hover
+{
+	color: #FFFFFF;
+}
+ 
+#colright .row4 .button,
+#colright .row4 .validate,
+#colright .row4 .readmore,
+#colright .row4 .readmore button,
+#colright .row4 .readmore .button,
+#colright .row4 input.button,
+#colright .row4 button.button,
+#colright .row4 button.validate,
+#colright .row4 button,
+#colright .row5 .button,
+#colright .row5 .validate,
+#colright .row5 .readmore,
+#colright .row5 .readmore button,
+#colright .row5 .readmore .button,
+#colright .row5 input.button,
+#colright .row5 button.button,
+#colright .row5 button.validate,
+#colright .row5 button
+{
+	color: #CFCFCF !important;
+	background-color: #2E2E2E;
+}
+
+#colright .row4 .button a,
+#colright .row4 .readmore a,
+#colright .row4 .readmore button a,
+#colright .row4 .readmore .button a,
+#colright .row4 input.button a,
+#colright .row4 button.button a,
+#colright .row5 .button a,
+#colright .row5 .readmore a,
+#colright .row5 .readmore button a,
+#colright .row5 .readmore .button a,
+#colright .row5 input.button a,
+#colright .row5 button.button a
+{
+	color: #CFCFCF !important;
+}
+
+#colright .row4 .button a:hover,
+#colright .row4 .readmore:hover,
+#colright .row4 .readmore:hover a,
+#colright .row4 .readmore a:hover,
+#colright .row4 .readmore button:hover,
+#colright .row4 .readmore .button:hover,
+#colright .row4 .readmore button a:hover,
+#colright .row4 .readmore .button a:hover,
+#colright .row4 input.button:hover,
+#colright .row4 input.button a:hover,
+#colright .row4 button.validate:hover,
+#colright .row4 button:hover,
+#colright .row4 button.button:hover,
+#colright .row4 button.button a:hover,
+#colright .row5 .button a:hover,
+#colright .row5 .readmore:hover,
+#colright .row5 .readmore:hover a,
+#colright .row5 .readmore a:hover,
+#colright .row5 .readmore button:hover,
+#colright .row5 .readmore .button:hover,
+#colright .row5 .readmore button a:hover,
+#colright .row5 .readmore .button a:hover,
+#colright .row5 input.button:hover,
+#colright .row5 input.button a:hover,
+#colright .row5 button.validate:hover,
+#colright .row5 button:hover,
+#colright .row5 button.button:hover,
+#colright .row5 button.button a:hover
+{
+	color: #CFCFCF !important;
+}
+
+#colright .row4 .readmore:hover,
+#colright .row4 .readmore button:hover,
+#colright .row4 .readmore .button:hover,
+#colright .row4 input.button:hover,
+#colright .row4 button.validate:hover,
+#colright .row4 button:hover,
+#colright .row4 button.button:hover,
+#colright .row5 .readmore:hover,
+#colright .row5 .readmore button:hover,
+#colright .row5 .readmore .button:hover,
+#colright .row5 input.button:hover,
+#colright .row5 button.validate:hover,
+#colright .row5 button:hover,
+#colright .row5 button.button:hover
+{
+	background-color: #404040;
+}
+
+/**************************************************************************************/
+/* Column Main
+/**************************************************************************************/
+/**************************************************************************************/
+
+#colmain #component,
+#cmp_content,
+span.priceColor2
+{
+	color: #BDBDBD;
+}
+
+#colmain h1,
+#colmain h2,
+#colmain h3,
+#cmp_colmain h1,
+#cmp_colmain h2,
+#cmp_colmain h3,
+.vmgroup .vmheader
+{
+	color: #E6E6E6;
+	text-shadow: 1px 1px #000000;
+}
+
+#colmain h4,
+#colmain h5
+{
+	color: #BDBDBD;
+}
+
+#colmain h1 a,
+#colmain h2 a,
+#colmain h3 a
+{
+	color: #E6E6E6;
+}
+
+#colmain h1 a:hover,
+#colmain h2 a:hover,
+#colmain h3 a:hover
+{
+	color: #2750A2;
+}
+
+#colmain h4
+#colmain h5
+{
+	color: #E6E6E6;
+}
+
+#colmain #component h1,
+#colmain #component h2,
+#colmain #component h3,
+#colmain #adsense h1,
+#colmain #adsense h2,
+#colmain #adsense h3,
+#cmp_colmain h1,
+#cmp_colmain h2,
+#cmp_colmain h3,
+.vm-button-correct, .vm-button-correct:link, .vm-button-correct:visited, .general-bg, input.custom-attribute, .manufacturer-product-link a, a.ask-a-question, input.vm-default, a.product-details, a.details, div.details, button.default,.ask-a-question-view input.button,a.ask-a-question:hover,
+
+span.custom-variant-inputbox input.custom-attribute:hover,input.vm-default:hover,a.details:hover,div.details:hover,a.product-details:hover,button.default:hover,
+
+.general-bg, input.custom-attribute, .manufacturer-product-link a, a.ask-a-question, input.vm-default, a.product-details, a.details, div.details, button.default, a.continue_link, .vmcart_heading, .vmgroup .vmheader
+{
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	background-color: #272727;
+	border: 1px solid #343445;
+	box-shadow: 1px 1px 1px #000000;
+	border-radius: 3px 3px 3px 3px;	
+}
+
+#colmain a
+{
+	color: #BDBDBD;
+}
+
+#colmain a:hover
+{
+	color: #2750A2;
+}
+
+#colmain input[type="checkbox"],
+#colmain input[type="radio"]
+{
+	background-color: transparent !important!
+}
+
+#colmain p
+{
+	color: #BDBDBD;
+}
+
+#colmain #component .article-info,
+#cmp_colmain .article-info
+{
+	background-color: #272727;
+	border: 1px solid #343445;
+	box-shadow: 1px 1px 1px #000000;
+	color: #2750A2;
+}
+
+#colmain #component .blog p.readmore a span
+{
+	color: #2750A2;
+}
+
+#colmain span.spacer > span.text label
+{
+	color: #BDBDBD;
+}
+
+#colmain #jform_spacer-lbl,
+#colmain label.invalid,
+#colmain .red,
+#colmain .star,
+#colmain .asterisk
+{
+	color: #2750A2;
+}
+
+.border_bottom
+{
+	border-bottom: 1px #E6E6E6 dotted;
+}
+
+.article-info
+{
+	color: #E6E6E6;
+	text-shadow: 1px 1px #000000;
+}
+
+.toggle_content, #vm_reviews_characters input
+{
+	background-color: #CFCFCF;
+	border: 1px solid #000000;
+	color: #272727;
+    border-radius: 3px;
+}
+
+#colmain .toggle_content h1,
+#colmain .toggle_content h2,
+#colmain .toggle_content h3,
+#colmain .toggle_content h4,
+#colmain .toggle_content h5
+{
+	color: #272727;
+}
+
+
+/**************************************************************************************/
+
+
+#system-message dd.error ul,
+#system-message dd.warning ul,
+#system-message dd.notice ul
+{
+	border: 3px solid #FF0000;
+	border-radius: 3px;	
+}
+
+#system-message ul li
+{
+	color: #2750A2;
+}
+
+.invalid
+{
+	border-color: #2750A2;	
+}
+
+
+/**************************************************************************************/
+/* Colmain Row 1                                                                      */
+
+
+#colmain .row1
+{
+	color: #BDBDBD;
+}
+
+#colmain .row1 h1,
+#colmain .row1 h2,
+#colmain .row1 h3,
+#colmain .row1 h4,
+#colmain .row1 h5
+{
+	color: #E6E6E6;
+	text-shadow: 1px 1px #000000;
+}
+
+#colmain .row1 h1,
+#colmain .row1 h2,
+#colmain .row1 h3
+{
+	background-color: #000000;
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	background-repeat: repeat;
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+}
+#colmain .row1 h3 span
+{
+	color: #2750A2;
+}
+
+#colmain .row1 p
+{
+	color: #BDBDBD;
+}
+
+#colmain .row1 a
+{
+	color: #FFFFFF;
+}
+
+#colmain .row1 a:hover
+{
+	color: #2750A2;
+}
+
+
+/**************************************************************************************/
+/* Colmain Row 2                                                                      */
+
+
+#colmain .row2 .row2col2
+{
+	color: #BDBDBD;
+	background-color: #272727;
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	background-repeat: repeat;
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+}
+
+#colmain .row2 .row2col2 h1,
+#colmain .row2 .row2col2 h2,
+#colmain .row2 .row2col2 h3
+{
+	color: #E6E6E6;
+	text-shadow: 1px 1px #000000;
+}
+
+#colmain .row2 .row2col2 h3 span
+{
+	color: #2750A2;
+}
+
+#colmain .row2 .row2col2 p
+{
+	color: #BDBDBD;
+}
+
+#colmain .row2 .row2col2 a
+{
+	color: #272727;
+}
+
+#colmain .row2 .row2col2 a:hover
+{
+	color: #2750A2;
+}
+
+
+/**************************************************************************************/
+/* Colmain Row 3                                                                      */
+
+
+#colmain .row3
+{
+	color: #BDBDBD;
+	background-color: #272727;
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+}
+
+#colmain .row3 h1,
+#colmain .row3 h2,
+#colmain .row3 h3
+{
+	color: #E6E6E6;
+	text-shadow: 1px 1px #000000;
+}
+
+#colmain .row3 h3 span
+{
+	color: #2750A2;
+}
+
+#colmain .row3 p
+{
+	color: #BDBDBD;
+}
+
+#colmain .row3 a
+{
+	color: #BDBDBD;
+}
+
+#colmain .row3 a:hover
+{
+	color: #2750A2;
+}
+
+
+/**************************************************************************************/
+/* Colmain Row 4 */
+
+
+#colmain .row4
+{
+	color: #BDBDBD;
+}
+
+#colmain .row4 h1,
+#colmain .row4 h2,
+#colmain .row4 h3,
+#colmain .row4 h4,
+#colmain .row4 h5
+{
+	color: #E6E6E6;
+	text-shadow: 1px 1px #000000;
+}
+
+#colmain .row4 h1,
+#colmain .row4 h2,
+#colmain .row4 h3
+{
+	background-color: #272727;
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+}
+
+#colmain .row4 h3 span
+{
+	color: #2750A2;
+}
+
+#colmain .row4 p
+{
+	color: #BDBDBD;
+}
+
+#colmain .row4 a
+{
+	color: #BDBDBD;
+}
+
+#colmain .row4 a:hover
+{
+	color: #2750A2;
+}
+
+/**************************************************************************************/
+/* Footer
+/**************************************************************************************/
+/**************************************************************************************/
+
+/**************************************************************************************/
+/* Footer Row 1                                                                       */
+
+
+#footer .row1 .row1col1,
+#footer .row1 .row1col2,
+#footer .row1 .row1col3,
+#footer .row1 .row1col4
+{
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+}
+
+#footer .row1 h1,
+#footer .row1 h2,
+#footer .row1 h3,
+#footer .row1 h4,
+#footer .row1 h5
+{
+	color: #E6E6E6;
+	text-shadow: 1px 1px #000000;
+}
+
+#footer .row1 a,
+#footer .row1 h1 a,
+#footer .row1 h2 a,
+#footer .row1 h3 a,
+#footer .row1 h4 a,
+#footer .row1 h5 a
+{
+	color: #CFCFCF;
+}
+
+#footer .row1 a:hover,
+#footer .row1 h1 a:hover,
+#footer .row1 h2 a:hover,
+#footer .row1 h3 a:hover,
+#footer .row1 h4 a:hover,
+#footer .row1 h5 a:hover
+{
+	color: #CFCFCF;
+}
+
+#footer .row1 h3 span
+{
+	color: #2750A2;
+}
+
+#footer .row1 .button,
+#footer .row1 .validate,
+#footer .row1 .readmore,
+#footer .row1 .readmore button,
+#footer .row1 .readmore .button,
+#footer .row1 input.button,
+#footer .row1 button.button,
+#footer .row1 button.validate,
+#footer .row1 button
+{
+	color: #CFCFCF !important;
+	background-color: #2E2E2E;
+}
+
+#footer .row1 .button a,
+#footer .row1 .readmore a,
+#footer .row1 .readmore button a,
+#footer .row1 .readmore .button a,
+#footer .row1 input.button a,
+#footer .row1 button.button a
+{
+	color: #CFCFCF !important;
+}
+#footer .row1 .button a:hover,
+#footer .row1 .readmore:hover,
+#footer .row1 .readmore:hover a,
+#footer .row1 .readmore a:hover,
+#footer .row1 .readmore button:hover,
+#footer .row1 .readmore .button:hover,
+#footer .row1 .readmore button a:hover,
+#footer .row1 .readmore .button a:hover,
+#footer .row1 input.button:hover,
+#footer .row1 input.button a:hover,
+#footer .row1 button.validate:hover,
+#footer .row1 button:hover,
+#footer .row1 button.button:hover,
+#footer .row1 button.button a:hover
+{
+	color: #CFCFCF !important;
+}
+
+#footer .row1 .readmore:hover,
+#footer .row1 .readmore button:hover,
+#footer .row1 .readmore .button:hover,
+#footer .row1 input.button:hover,
+#footer .row1 button.validate:hover,
+#footer .row1 button:hover,
+#footer .row1 button.button:hover
+{
+	background-color: #404040;
+}
+
+/**************************************************************************************/
+
+#footer .row1col1,
+#footer .row1col2,
+#footer .row1col3,
+#footer .row1col4
+{
+	color: #CFCFCF;
+	background-color: #332723;
+	background-image: url('../images/styles/bluerain/bg.content.png');
+}
+
+
+/**************************************************************************************/
+/* Footer Row 2 */
+
+
+#footer .row2
+{
+	color: #CFCFCF;
+	background-color: #272727;
+	background-image: url('../images/styles/bluerain/bg.content.png');
+    border: 1px solid #343445;
+    box-shadow: 1px 1px 1px #000000;
+}
+
+#footer .row2 h3 span
+{
+	color: #2750A2;
+}
+
+#footer .row2 h1,
+#footer .row2 h2,
+#footer .row2 h3,
+#footer .row2 h4,
+#footer .row2 h5
+{
+	color: #E6E6E6;
+	text-shadow: 1px 1px #000000;
+}
+
+#footer .row2 input
+{
+	color: #CFCFCF;
+}
+
+#footer .row2 p,
+#footer .row2 #trademark
+{
+	color: #CFCFCF;
+}
+
+#footer .row2 a,
+#footer .row2 #footermenu li a
+{
+	color: #CFCFCF;
+}
+
+#footer .row2 a:hover
+{
+	color: #2750A2;
+}
+
+
+/**************************************************************************************/
+/* Footer Row 3                                                                       */
+
+
+#footer .row3
+{
+	color: #CFCFCF;
+}
+
+#footer .row3 a
+{
+	color: #CFCFCF;
+}
+
+#footer .row3 a:hover
+{
+	color: #2750A2;
+}
+
+
+/**************************************************************************************/
+/**************************************************************************************/
+/* General Element IDs and classes
+/**************************************************************************************/
+/**************************************************************************************/
+
+button,
+.button,
+.validate,
+.readmore,
+#component p.readmore,
+span.addtocart-button input.addtocart-button, span.addtocart-button input.notify-button, span.details-button input.details-button, #ui-tabs ul#tabs li
+{
+	background-color: #2E2E2E;
+	color: #CFCFCF !important;
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+	background-image: url('../images/bg.btn.png');
+}
+
+.readmore a,
+#component p.readmore a
+{
+	color: #CFCFCF !important;
+}
+
+button:hover,
+.button:hover,
+.validate:hover,
+.readmore:hover,
+#component p.readmore:hover, #ui-tabs ul#tabs li.current
+{
+	background-color: #404040;
+	color: #CFCFCF !important;
+}
+
+#component p.readmore a:hover
+{
+	color: #CFCFCF !important;
+}
+
+.moduletable_menu li a:hover
+{
+	color: #2750A2;
+}
+
+.googlemap
+{
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	background-repeat: repeat;
+	background-color: transparent;
+	color: #E6E6E6;
+	border: 1px solid #343445;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #000000;
+}
+
+#as_accordionmenu 
+{
+	background-image: url('../images/styles/bluerain/bg.content.png');
+	border: 1px solid #343445;
+}
+
+#as_accordionmenu a:hover
+{
+	color: #2750A2 !important;
+}
+
+#as_accordionmenu ul.as_menu ul li, 
+#as_accordionmenu ul.as_menu ul li a 
+{
+    color: #7FACFF !important;
+}
+
+#as_accordionmenu ul.as_menu ul li a :hover
+{
+	color: #2750A2;
+}
+
+.slider
+{
+	background-image: url('../images/styles/bluerain/bg.content.png') !important;
+	background-repeat: repeat;	
+	border-radius: 3px;
+}
+
+.as_slider-wrapper .nivoSlider
+{
+	border: 1px solid #343445;
+}
+
+span.title, .customer-reviews #reviewform h4,
+#header .row0 .content,
+div.product-price div,
+.product-fields-title,
+.addtocart-area .product-fields .product-field label.other-customfield,
+.orderby-displaynumber, .horizontal-separator
+{
+    border-bottom: 1px solid #343445;
+}
+
+.product-price, .orderby-displaynumber, .vm-pagination
+{
+    border-top: 1px solid #343445;
+}
+
+.product-fields .product-field, .product-related-categories .product-field,
+.manufacturer-view-default, 
+.vm_loginform, .vm_content_form_login, .vm_loginform input.inputbox, .billto-shipto, .vm_cart_order_information, .coupon, textarea.customer-comment, table.user-details, textarea.virtuemart
+{
+    border: 1px solid #343445;
+}
+
+.horizontal-separator, .billto-shipto .asbillto, table.cart-summary tr th
+{
+    border-bottom: 1px dotted #343445;
+}
+
+table.cart-summary tr td
+{
+    border-bottom: 1px solid #343445;
+    border-left: 1px solid #343445;
+}
+
+.browse-view .row .product .spacer img, .related-products-view .row .product .spacer img,
+.main-image img.product-image, .featured-view .spacer img, .latest-view .spacer img, .topten-view .spacer img, .recent-view .spacer img,
+.vmgroup .spacer a img, .vmgroup ul.vmproduct li a img,
+.main-image img, .additional-images img, #facebox .popup, #sbox-window
+{
+    border: 1px solid #454556;
+    padding: 3px;
+    background-color: #343445;
+}
